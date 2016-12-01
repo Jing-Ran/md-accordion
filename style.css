@@ -1,0 +1,80 @@
+.accordion {
+  border: 1px solid black;
+  border-radius: 8px;
+  min-width: 350px;
+  max-width: 700px;
+  width: 80%;
+  box-sizing: border-box;
+  font-size: 90%;
+  font-family: arial, sans-serif;
+}
+
+.accordion ul {
+  margin: 0;
+  padding: 8px;
+  list-style: none;
+}
+
+.accordion li {
+  border: 1px solid black;
+  margin: 3px;
+}
+
+.accordion li input {
+  display: none;
+}
+
+.accordion li label {
+  display: block;
+  font-size: 1.2em;
+  font-weight: bolder;
+  background-color: #D85C42;
+  padding: 8px 13px;
+  text-align: left;
+  line-height: 1.5em;
+  text-transform: uppercase;
+  -webkit-transition: color 0.3s, background-color 0.3s;
+  -moz-transition: color 0.3s, background-color 0.3s;
+  transition: color 0.3s, background-color 0.3s;
+  -moz-transition-timing-function: ease-out;
+  -webkit-transition-timing-function: ease-out;
+  -o-transition-timing-function: ease-out;
+  transition-timing-function: ease-out;
+}
+
+.accordion li .accordion-content {
+  height: 0;
+  padding: 0 13px;
+  overflow-y: hidden;
+  -webkit-transition: all 0.3s ease-out;
+  -moz-transition: all 0.3s ease-out;
+  transition: all 0.3s ease-out;
+}
+
+/* give space between the last p and the .accordion-content border */
+.accordion li .accordion-content p:last-of-type {
+  margin-bottom: 20px;
+}
+
+.accordion li input:checked + label {
+  background-color: #BF2942;
+  color: white;
+  border-bottom: 1px solid black;
+}
+
+.accordion li input:checked ~ .accordion-content:first-of-type {
+  height: 250px;
+}
+
+.accordion li .accordion-content h3 {
+  color: #33001a;
+}
+
+.accordion li .accordion-content h4 {
+  margin-bottom: 10px;
+}
+
+.accordion li .accordion-content p {
+  margin: 0;
+}
+
